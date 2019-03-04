@@ -3,6 +3,8 @@ package main
 import (
 	"log"
 	"net/http"
+
+	"google.golang.org/appengine"
 )
 
 func main() {
@@ -19,5 +21,6 @@ func main() {
 		},
 	)
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	//log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(appengine.Main())
 }
