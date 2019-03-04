@@ -1,8 +1,9 @@
 package main
 
 import (
-	"log"
 	"net/http"
+
+	"google.golang.org/appengine"
 )
 
 func main() {
@@ -10,7 +11,7 @@ func main() {
 	// ハンドラーを貼るパスの指定です。今回は他のディレクトリもないので、ルートを指定します。
 	rootPath := "/"
 	// 返却するファイルが配置されている場所のパスです。
-	docDir := "/Users/kren/Documents/11 dataChase/Go/0303_WebServerTest/doc"
+	docDir := "./"
 
 	http.HandleFunc(
 		rootPath,
@@ -19,5 +20,6 @@ func main() {
 		},
 	)
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	//log.Fatal(http.ListenAndServe(":8080", nil))
+	appengine.Main()
 }
