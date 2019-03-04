@@ -10,7 +10,7 @@ func main() {
 	// ハンドラーを貼るパスの指定です。今回は他のディレクトリもないので、ルートを指定します。
 	rootPath := "/"
 	// 返却するファイルが配置されている場所のパスです。
-	docDir := "/Users/kren/Documents/11 dataChase/Go/0303_WebServerTest/doc"
+	docDir := "/"
 
 	http.HandleFunc(
 		rootPath,
