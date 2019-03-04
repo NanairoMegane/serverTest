@@ -11,7 +11,7 @@ func main() {
 	// ハンドラーを貼るパスの指定です。今回は他のディレクトリもないので、ルートを指定します。
 	rootPath := "/"
 	// 返却するファイルが配置されている場所のパスです。
-	docDir := "/"
+	docDir := "./"
 
 	http.HandleFunc(
 		rootPath,
